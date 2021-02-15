@@ -13,3 +13,6 @@
 	* Aceptar la tarea asignada en GitHub Classroom asociada a esta práctica.
 
 *Partiremos de la idea de que disponemos de una cuenta de Github asociada a nuestra cuenta institucional* 
+###Configuración de la Máquina Virtual en el IaaS
+Lo primero que deberemos hacer será configurar el servicio VPN de la Ull, en el caso de que nos encontremos en una red que no fuera la de la Universidad.
+Para ello podemos basarnos en la documentación facilitada por el STIC de la ULL.

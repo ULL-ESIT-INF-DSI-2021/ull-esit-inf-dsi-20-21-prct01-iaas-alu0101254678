@@ -18,4 +18,4 @@ Lo primero que deberemos hacer será configurar el servicio VPN de la Ull, en el
 Para ello podemos basarnos en la documentación facilitada por el STIC de la ULL.             
 Una vez que nos hemos conectado a la VPN, accedemos al servicio del IaaS de la ULL para introducir los credenciales.Despues de haber iniciado sesión, tendremos
 que elegir la máquina virtual que se nos ha asignado, que se llamará DSI, la cual podremos iniciar, lo cual hará que se asigne dicha máquina virtual.
-
+![Captura IaaS] (/images/captura_iaas.png)

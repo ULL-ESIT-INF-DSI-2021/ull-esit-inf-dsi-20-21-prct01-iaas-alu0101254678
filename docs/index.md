@@ -26,3 +26,13 @@ que elegir la máquina virtual que se nos ha asignado, que se llamará DSI, la c
 			
 En el siguiente enlace se encuentra disponible una imagen ilustrativa de la interfaz de la gestión de máquinas virtuales:
 <https://drive.google.com/file/d/1ZFk4AM8ekEMzjIPT2ra6I8aQH_f3FMRN/view?usp=sharing>
+
+En el panel de detalles se puede observar la dirección IP de la máquina una vez que la hemos arrancado, entonces sera posible conectarse vía ssh a la máquina en cuestión.
+
+Para conectarse a la máquina virtual en una terminal hemos de introducir lo siguiente:
+
+```Markadown
+ssh usuario@10.6.XXX.XXX
+```
+
+Itroducimos *yes* y pulsamos *intro* a la pregunta que nos realiza el sistema.

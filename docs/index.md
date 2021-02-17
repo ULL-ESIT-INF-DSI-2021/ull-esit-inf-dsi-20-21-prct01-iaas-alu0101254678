@@ -17,9 +17,10 @@
 1. El lenguaje que se ha utilizado para el desarrollo del presente informe es [Markdown](https://guides.github.com/features/mastering-markdown/)
 2. El informe se presenta en forma de página web de GitHub, por lo que tenemos que desarrollar el informe de la práctica como una [Github Page](https://docs.github.com/en/github/working-with-github-pages) haciendo uso del lenguaje anteriormente descrito.
 
-###Introducción y Objetivos
+### Introducción y Objetivos
 En esta práctica llevaremos a cabo la configuración de la máquina virtual del IaaS que nos han asignado, así como la instalación de las herramientas necesarias para poder empezar
 a trabajar con la asignatura.
+
 Una vez finalizada la práctica, tendremos a disposición la máquina virtual configurada e instaladas las herramientas de desarrollo necesarias para los siguientes trabajos.
 
 ### Configuración de la Máquina Virtual en el IaaS

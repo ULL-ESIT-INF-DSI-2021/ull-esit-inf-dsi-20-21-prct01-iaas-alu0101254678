@@ -16,9 +16,13 @@
 *Los siguientes recursos nos pueden ayudar en el desarrollo de la práctica*
 1. El lenguaje que se ha utilizado para el desarrollo del presente informe es [Markdown](https://guides.github.com/features/mastering-markdown/)
 2. El informe se presenta en forma de página web de GitHub, por lo que tenemos que desarrollar el informe de la práctica como una [Github Page](https://docs.github.com/en/github/working-with-github-pages) haciendo uso del lenguaje anteriormente descrito.
+
 ### Configuración de la Máquina Virtual en el IaaS
 Lo primero que deberemos hacer será configurar el servicio VPN de la Ull, en el caso de que nos encontremos en una red que no fuera la de la Universidad.
-Para ello podemos basarnos en la [documentación](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/) facilitada por el STIC de la ULL.             
+Para ello podemos basarnos en la [documentación](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/) facilitada por el STIC de la ULL.
+             
 Una vez que nos hemos conectado a la VPN, accedemos al servicio del [IaaS de la ULL](https://iaas.ull.es/) para introducir los credenciales.Despues de haber iniciado sesión, tendremos
-que elegir la máquina virtual que se nos ha asignado, que se llamará DSI, la cual podremos iniciar, lo cual hará que se asigne dicha máquina virtual a las que tenemos.			
-En el siguiente enlace se encuentra disponible una imagen ilustrativa de la interfaz de la gestión de máquinas virtuales<https://drive.google.com/file/d/1ZFk4AM8ekEMzjIPT2ra6I8aQH_f3FMRN/view?usp=sharing>
+que elegir la máquina virtual que se nos ha asignado, que se llamará DSI, la cual podremos iniciar, lo cual hará que se asigne dicha máquina virtual a las que tenemos.
+			
+En el siguiente enlace se encuentra disponible una imagen ilustrativa de la interfaz de la gestión de máquinas virtuales:
+<https://drive.google.com/file/d/1ZFk4AM8ekEMzjIPT2ra6I8aQH_f3FMRN/view?usp=sharing>

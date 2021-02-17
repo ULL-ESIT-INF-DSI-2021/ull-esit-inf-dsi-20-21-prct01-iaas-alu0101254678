@@ -35,4 +35,18 @@ Para conectarse a la máquina virtual en una terminal hemos de introducir lo sig
 ssh usuario@10.6.XXX.XXX
 ```
 
-Itroducimos *yes* y pulsamos *intro* a la pregunta que nos realiza el sistema.
+Introducimos *yes* y pulsamos *intro* a la pregunta que nos realiza el sistema.
+
+La contraseña que deberemos introducir es *usuario*(las credenciales por defecto son *usuario* y *usuario*, para el nombre de usuario y contraseña, respectivamente). Una vez que hemos introducido
+la contraseña, el propio sistema nos indicará que la actualicemos. Para ello deberemos introducir el usuario actual, *usuario*, y una contraseña por duplicado.
+
+Posteriormente se pedirá que iniciemos sesión nuevamente vía ssh con su máquina, introduciendo la nueva contraseña.
+
+Ahora necesitamos modificar el nombre host de la máquina virtual:
+```Markdown
+usuario@ubuntu:~$ cat /etc/hostname
+ubuntu
+sudo vi /etc/hostname
+usuario@ubuntu:~$ cat /etc/hostname
+iaas-dsi15
+``` 

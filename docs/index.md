@@ -57,4 +57,61 @@ usuario@ubuntu:~$ cat /etc/hostname
 iaas-dsi15
 ```
 
-Como se puede observar, el nombre correspondiente es *iaas-dsi15*
+Como se puede observar, el nombre correspondiente es *iaas-dsi15*. También deberemos modificar ciertos parámetros en el siguiente fichero:
+```Markdown
+usuario@ubuntu:~$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	ubuntu
+...
+
+usuario@ubuntu:~$ sudo vi /etc/hosts
+
+usuario@ubuntu:~$ cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	iaas-dsi15
+...
+```
+En este caso, hemos cambiado el antiguo nombre de host *ubuntu* por el nombre de host iaas-dsi15.Podemos reiniciar la máquina, sin embargo
+procedemos a actualizar el software de la misma:
+```Markadown
+usuario@ubuntu:~$ sudo apt update
+...
+usuario@ubuntu:~$ sudo apt upgrade
+...
+```
+Ahora procedemos a reiniciar la máquina virtual:
+```Markdown
+usuario@ubuntu:~$ sudo reboot
+Connection to 10.6.XXX.XXX closed by remote host.
+Connection to 10.6.XXX.XXX closed.
+```
+En nuestra máquina virtual podemos incluir la información relativa a la conexión con la máquina virtual, de esta forma no se tendrá que recordar
+la dirección IP cada vez que se inicie una sesión:
+```Markdown
+yago@Asus-PC:~$ cat /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       Asus-PC.localdomain     Asus-PC
+
+yago@Asus-PC:~$ sudo vi /etc/hosts
+
+yago@Asus-PC:~$ cat /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       Asus-PC.localdomain     Asus-PC
+
+10.6.130.173    iaas-dsi15
+```
+Ahora es necesario configurar la infraestructura de clave publica-privada, con el siguiente comando se puede averiguar si disponemos de dicha clave:
+```Markdown
+yago@Asus-PC:~$ cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC/zSQYAYCQxT1fckaf/os772sij2zVBut4BeyPpGbephlU/qySlw6EfNhkYCXqYuToGu9Fd6ihBJPlvY597/A3xzq69+wx1tfzqVU1RY2Mf80mdG0DIyoPGaENfNyF6gm1c9+n9iZOqwupU+l5Ecw2rHt6nWnoSsxLUAKk+NLsxFE7ovmkdd5X4n69n/4VBXfWkmDK8NFTZsH7ikwbPCBbqHpuPmCZbI7aCcbPxtihXTYUC6DbIzowcizE4HutQ+jNWp90kHgY3sg1E1WmTAWGbTnoK6XMaJiZI5hZwQINcSX9ImlDb8QfpH/+lfuruOfYm7Q7JNOwK02guqhbsMKD yago@DESKTOP-SCCJNSK
+```
+Si el comando anterior ofrece resultado, quiere decir que ya hemos generado ese par de claves, si ese fichero no existe, se puede ejecutar el siguiente 
+comando:
+```Markdown
+yago@Asus-PC:~$ ssh-keygen
+```
+En las opciones de las que nos va informando el script podemos seleccionar aquellas que sean por defecto, como la ruta en la que queremos que se genere
+la clave.
+
+Con el sigueinte comando se permite copiar la pareja de clave privada-pública desde la máquina local a la máquina virtual:
+

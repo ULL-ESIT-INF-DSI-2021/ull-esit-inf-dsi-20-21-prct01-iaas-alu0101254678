@@ -71,7 +71,7 @@ usuario@ubuntu:~$ cat /etc/hosts
 127.0.1.1	iaas-dsi15
 ...
 ```
-En este caso, hemos cambiado el antiguo nombre de host *ubuntu* por el nombre de host iaas-dsi15.Podemos reiniciar la máquina, sin embargo
+En este caso, hemos cambiado el antiguo nombre de host *ubuntu* por el nombre de host *iaas-dsi15*.Podemos reiniciar la máquina, sin embargo
 procedemos a actualizar el software de la misma:
 ```Markadown
 usuario@ubuntu:~$ sudo apt update
@@ -114,4 +114,63 @@ En las opciones de las que nos va informando el script podemos seleccionar aquel
 la clave.
 
 Con el sigueinte comando se permite copiar la pareja de clave privada-pública desde la máquina local a la máquina virtual:
+```Markdown
+yago@Asus-PC:~$ ssh-copy-id usuario@iaas-dsi15
+```
+Después de haber introducido la contraseña, se añade esa clave privada-publica.Y nuevamente, cuando tratamos de iniciar sesión con el comando anterior:
+```Markdown
+yago@Asus-PC:~$ ssh usuario@iaas-dsi15
+
+...
+
+usuario@iaas-dsi15:~$
+```
+Como se puede observar, hemos sido capaces de acceder a la máquina virtual sin necesidad de introducir ninguna contraseña, además deberían reflejarse los cambios
+relativos al nombre de la máquina.
+
+En el caso de que no quisiéramos iutilizar el nombre de usuario (__usuario__) de la máquina virtual a la hora de conectarse vía __SSH__ , es posible ocnfigurar el 
+siguiente fichero en la máquina local:
+```Markdown
+yago@Asus-PC:~$ cat ~/.ssh/config
+Host exthost.etsii.ull.es      
+  HostName exthost.etsii.ull.es
+  User alu0101254678
+
+Host 10.6.131.162
+  HostName 10.6.131.162        
+  User usuario
+
+yago@Asus-PC:~$ vi ~/.ssh/config
+
+...
+
+yago@Asus-PC:~$ cat ~/.ssh/config
+Host exthost.etsii.ull.es
+  HostName exthost.etsii.ull.es
+  User alu0101254678
+
+Host 10.6.131.162
+  HostName 10.6.131.162
+  User usuario
+
+Host iaas-dsi15
+  Hostname iaas-dsi15
+  User usuario
+```
+
+De esta forma no será necesario indicar el nombre de usuario en el inicio de sesión, con escribir el nombre de la máquina es suficiente:
+```Markdown
+yago@Asus-PC:~$ ssh iaas-dsi15
+```
+Posteriormente generamos las claves publica-privada en la máquina virtual también, siguiedo los mismos pasos que seguimos anteriormente para la máquina local:
+```Markdown
+usuario@iaas-dsi15:~$ ssh-keygen
+
+...
+
+usuario@iaas-dsi15:~$ cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQTAJ0Sr2moZmiL2m9Bvrj8WB2e7VTwm/UlUEHmjIIIMTJOYEMtQApryjQgKJwwj3s0YrkHVxr9DKXp24X2NkctFKsnd0Z1UsJxQ06rJEqxwhyJ/im3+IeqQ3wIZ5ao4IhNu+Kp1y/0CF5KbFV59M1JjHVC5LBujaOOfIGkSXGjdYSTQnXWnN7armbMm2PnyIb7Qm6YJrFS/cGnlRUdJZJmK9Okkup1Jkkq1IJsRX/P4XyisfhUFZJP+hjg0G+ZK2l9JAKRYFCQ11n4i24LcWg9FVwhkZAA4NkIc2HJER6u93NA733dF6/8abeZOKV8EkTlP2R3IokZlsehlmFzJvH usuario@iaas-dsi15
+```
+### Instalación de __git__ y __Node.js__ en la máquina virtual del IaaS
+
 

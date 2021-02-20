@@ -17,13 +17,13 @@ __*Pasos realizados para el desarrollo de la práctica*__
 1. El lenguaje que se ha utilizado para el desarrollo del presente informe es [Markdown](https://guides.github.com/features/mastering-markdown/)
 2. El informe se presenta en forma de página web de GitHub, por lo que tenemos que desarrollar el informe de la práctica como una [Github Page](https://docs.github.com/en/github/working-with-github-pages) haciendo uso del lenguaje anteriormente descrito.
 
-__### Introducción y Objetivos__
+### __Introducción y Objetivos__
 En esta práctica llevaremos a cabo la configuración de la máquina virtual del IaaS que nos han asignado, así como la instalación de las herramientas necesarias para poder empezar
 a trabajar con la asignatura.
 
 Una vez finalizada la práctica, tendremos a disposición la máquina virtual configurada e instaladas las herramientas de desarrollo necesarias para los siguientes trabajos.
 
-__### Configuración de la Máquina Virtual en el IaaS__
+### __Configuración de la Máquina Virtual en el IaaS__
 Lo primero que deberemos hacer será configurar el servicio VPN de la Ull, en el caso de que nos encontremos en una red que no fuera la de la Universidad.
 Para ello podemos basarnos en la [documentación](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/) facilitada por el *STIC* de la *ULL*.
              

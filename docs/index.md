@@ -28,7 +28,7 @@ Lo primero que deberemos hacer será configurar el servicio VPN de la Ull, en el
 Para ello podemos basarnos en la [documentación](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/) facilitada por el *STIC* de la *ULL*.
              
 Una vez que nos hemos conectado a la VPN, accedemos al servicio del [IaaS de la ULL](https://iaas.ull.es/) para introducir los credenciales.Despues de haber iniciado sesión, tendremos
-que elegir la máquina virtual que se nos ha asignado, que se llamará *DSI*, la cual podremos iniciar, lo cual hará que se asigne dicha máquina virtual a las que tenemos.
+que elegir la máquina virtual que se nos ha asignado, que se llamará *DSI*, la cual podremos iniciar, lo que hará que se asigne dicha máquina virtual a las que tenemos.
 			
 En el siguiente enlace se encuentra disponible una imagen ilustrativa de la interfaz de la gestión de máquinas virtuales:
 <https://drive.google.com/file/d/1ZFk4AM8ekEMzjIPT2ra6I8aQH_f3FMRN/view?usp=sharing>
@@ -71,7 +71,7 @@ usuario@ubuntu:~$ cat /etc/hosts
 127.0.1.1	iaas-dsi15
 ...
 ```
-En este caso, hemos cambiado el antiguo nombre de host *ubuntu* por el nombre de host *iaas-dsi15*.Podemos reiniciar la máquina, sin embargo
+En este caso, hemos cambiado el antiguo nombre de host *ubuntu* por el nombre de host *iaas-dsi15*.Podemos reiniciar la máquina, sin embargo primero
 procedemos a actualizar el software de la misma:
 ```Markadown
 usuario@ubuntu:~$ sudo apt update
@@ -113,7 +113,7 @@ yago@Asus-PC:~$ ssh-keygen
 En las opciones de las que nos va informando el script podemos seleccionar aquellas que sean por defecto, como la ruta en la que queremos que se genere
 la clave.
 
-Con el sigueinte comando se permite copiar la pareja de clave privada-pública desde la máquina local a la máquina virtual:
+Con el siguiente comando se permite copiar la pareja de clave privada-pública desde la máquina local a la máquina virtual:
 ```Markdown
 yago@Asus-PC:~$ ssh-copy-id usuario@iaas-dsi15
 ```
@@ -128,7 +128,7 @@ usuario@iaas-dsi15:~$
 Como se puede observar, hemos sido capaces de acceder a la máquina virtual sin necesidad de introducir ninguna contraseña, además deberían reflejarse los cambios
 relativos al nombre de la máquina.
 
-En el caso de que no quisiéramos iutilizar el nombre de usuario (__usuario__) de la máquina virtual a la hora de conectarse vía __SSH__ , es posible ocnfigurar el 
+En el caso de que no quisiéramos utilizar el nombre de usuario (__usuario__) de la máquina virtual a la hora de conectarse vía __SSH__ , es posible configurar el 
 siguiente fichero en la máquina local:
 ```Markdown
 yago@Asus-PC:~$ cat ~/.ssh/config
@@ -213,7 +213,7 @@ Para comprobar el correcto funcionamiento de la terminal, podemos situarnos en u
 Asimismo, deberemos emplear la clave pública-privada que hemos generado anteriormente para establecer una relación con GitHub, para trabajar con repositorios remotos, y poder clonar
 alguno de ellos y hacer la prueba.
 
-En primer lugar, copiamos la clave pública de su máquina virtual:
+En primer lugar, copiamos la clave pública de nuestra máquina virtual:
 ```Markdown
 [~()]$cat ~/.ssh/id_rsa.pub
 
@@ -312,12 +312,40 @@ El desarrollo de la práctica ha sido un primer acercamiento para intentar apren
 preparado para la realización de las posteriores prácticas.
 
 En el desarrollo de la práctica, se han encontrado algunas dificultades menores, que son ajenas al desarrollo de la misma pero que tienen influencia,
-como los retrasos en el tráfico de datos de la conexión a Internet.
+como los retrasos en el tráfico de datos de la conexión a Internet, ya que no ha sido posible conectarse a una red inalámbrica y se ha utilizado el móvil como
+punto de acceso.
 
 Otra dificultad menor ha sido, habilitar el servicio de GitHub pages, en GitHub, así como aprender a manejar de una forma más o menos adecuada el lenguaje 
 de marcado Markdown, que si bien es más sencillo que otros lenguajes, no se había visto anteriormente.
 
-###Bibliografía 
+### Bibliografía 
 
+Enlaces que permiten aprender conocimientos sobre el gestor de versiones _*git*_:
+
+<https://git-scm.com/book/es/v2>
+
+<https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez>
+
+Enlaces que permiten aprender a manejarse en _*GitHub*_:
+
+<https://lab.github.com/githubtraining/introduction-to-github>
+
+<https://lab.github.com/>
+
+<https://lab.github.com/githubtraining/first-week-on-github>
+
+Enlaces relacionados con el lenguaje de programación _*Typescript*_:
+
+*_Node Version Manager_*, (nvm) el gestor de versiones de *_Node.js_*:
+
+<https://github.com/nvm-sh/nvm>
+
+*_Node.js_*, entorno de ejecución de código de *_javascript_*:
+
+<https://nodejs.org/en/>
+
+*_Node Package Manager_*, el gestor de paquetes de *_Node.js_*
+
+<https://www.npmjs.com/>
 
 
